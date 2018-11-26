@@ -50,6 +50,10 @@
       <Project>{cfd312ce-5d10-4986-bdeb-0f4447e939fd}</Project>
       <Name>EEP_Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EEP_Repository\EEP_Repository.csproj">
+      <Project>{4b045c9f-1016-41d7-827c-c93195f8f3b5}</Project>
+      <Name>EEP_Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
