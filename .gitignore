@@ -1,0 +1,9 @@
+*.class
+*.log
+output/
+build/
+target/
+.vs
+bin/
+obj/
+packages/

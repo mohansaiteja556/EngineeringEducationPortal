@@ -1,0 +1,115 @@
+﻿
+@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/_StudentLayout.cshtml";
+}
+
+<html>
+<head>
+    <title>exam</title>
+    <script type="text/javascript">
+        function f1() {
+            var coffee = document.forms[0];
+            var txt = "";
+            var i;
+            for (i = 0; i < coffee.length; i++) {
+                if (coffee[i].checked) {
+                    txt = txt + coffee[i].value;
+                }
+                else {
+                    txt = txt + "0";
+                }
+            }
+            var s = "";
+            var m1 = 0;
+            var marks = "a1111b1111c1111d11c111c1111d";
+            for (var i1 = 0; i1 < txt.length; i1++) {
+                if (txt[i1] == marks[i1]) {
+                    m1 = m1 + 1;
+                }
+            }
+            var c = document.getElementById("c2")
+            c.innerText = "Total marks is" + m1;
+        }
+    </script>
+    <style type="text/css">
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <tr colspan="2"><td>1:HTML stands for?</td></tr>
+            <tr>
+                <td><input type="radio" name="a1" value="a" id="b1" onclick="">A:Hyper Text Markup Language</td>
+                <td><input type="radio" name="a1" value="b" id="b2">B:High Text Markup Language</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="a1" value="c" id="b3">C:Hyper Tabular Markup Language</td>
+                <td><input type="radio" name="a1" value="d" id="b4">D:None of these</td>
+            </tr>
+            <tr colspan="2"><td>2:Which tags are most commonly used by search engines?</td></tr>
+            <tr>
+                <td><input type="radio" name="a2" value="a">A:Heading</td>
+                <td><input type="radio" name="a2" value="b">B:Title</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="a2" value="c">C:Paragrah</td>
+                <td><input type="radio" name="a2" value="d">D:All of above</td>
+            </tr>
+            <tr colspan="2"><td>3:What is the "br" tag for?</td></tr>
+            <tr>
+                <td><input type="radio" name="a3" value="a">A:Space</td>
+                <td><input type="radio" name="a3" value="b">B:Paragraph break</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="a3" value="c">C:Line break</td>
+                <td><input type="radio" name="a3" value="d">D:Word break</td>
+            </tr>
+            <tr colspan="2"><td>4:What is the attribute for "image" tag?</td></tr>
+            <tr>
+                <td><input type="radio" name="a4" value="a">A:pt</td>
+                <td><input type="radio" name="a4" value="b">B:url</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="a4" value="c">C:path</td>
+                <td><input type="radio" name="a4" value="d">D:src</td>
+            </tr>
+            <tr colspan="2"><td>5:Each list item in an ordered or unordered list has which tag?</td></tr>
+            <tr>
+                <td><input type="radio" name="a5" value="a">A:list tag</td>
+                <td><input type="radio" name="a5" value="b">B:ls tag</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="a5" value="c">C:li tag</td>
+                <td><input type="radio" name="a5" value="d">D:ol tag</td>
+            </tr>
+            <tr colspan="2"><td>6:Which of the following tags are used for a multi-line text input control?</td></tr>
+            <tr>
+                <td><input type="radio" name="a6" value="a">A:textml tag</td>
+                <td><input type="radio" name="a6" value="b">B:text tag</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="a6" value="c">C:textarea tag</td>
+                <td><input type="radio" name="a6" value="d">D:Both b and c</td>
+            </tr>
+            <tr colspan="2"><td>7:Which of the following attributes are used for a font name?</td></tr>
+            <tr>
+                <td><input type="radio" name="a7" value="a">A:fontname</td>
+                <td><input type="radio" name="a7" value="b">B:fn</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="a7" value="c">C:font</td>
+                <td><input type="radio" name="a7" value="d">D:face</td>
+            </tr>
+        </table>
+    </form>
+    <div style="text-align: center;">
+        <input type="submit" name="bl" value="submit" onclick="f1()">
+        <input type="reset" name="b2" value="reset">
+    </div>
+    <span id="c2"></span>
+</body>
+</html>

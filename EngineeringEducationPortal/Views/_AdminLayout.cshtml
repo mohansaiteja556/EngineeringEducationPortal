@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/myscripts/StudentStyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="height: 100%;width: 100%">
+        <div style="height: 20%;width: 100%">
+            <div id="n1" style="height: 100%;width:80% ">
+                <h1>Kiranmai College of Engineering</h1>
+            </div>
+            <div id="n2" style="height:100%;width:20%">
+                <img src="~/images/images.png" height="50" width="50"><br>
+                <span>Hi</span>
+            </div>
+            <div id="menu" style="height: 30%;width: 100%;float: left;">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="#">Department</a>
+                        <ul>
+                            <li><a href="/Admin/AddDept">Add</a></li>
+                            <li><a href="#">Delete</a></li>
+                            <li><a href="/Admin/viewdept">View</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Student</a>
+                        <ul>
+                            <li><a href="#">Add</a></li>
+                            <li><a href="#">Delte</a></li>
+                            <li><a href="#">View</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Staff</a>
+                        <ul>
+                            <li><a href="#">Add</a></li>
+                            <li><a href="#">Delete</a></li>
+                            <li><a href="#">View</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Photos</a>
+                        <ul>
+                            <li><a href="#">Add</a></li>
+                            <li><a href="#">Delte</a></li>
+                            <li><a href="#">View</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Academic Calendar</a></li>
+                    <li><a href="#">Placements</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="abody" style="height: 70%;width: 100%">
+            <div id="n3" style="height: 100%;width: 80%">
+                @RenderBody()
+            </div>
+            <div id="n4" style="height: 100%;width: 20%">
+                <h4 style="text-align: center;">News and Events</h4>
+                <marquee behavior="scroll" direction="up" scrollamount="4">
+                    <ul>
+
+                        <li>Independent Day</li>
+                        <li>Freshers Party</li>
+                        <li>Sports and Cultural Activities</li>
+                    </ul>
+                </marquee>
+            </div>
+        </div>
+        <div style="height: 10%;width: 100%;float: left;text-align: center;">
+            <span style="text-align: center;">&copy;CopyRight Reseved</span>
+        </div>
+    </div>
+</body>
+</html>
