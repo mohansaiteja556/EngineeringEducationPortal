@@ -1,0 +1,9 @@
+C:\Users\MOHAN\source\repos\EngineeringEducationPortal\ADO\bin\Debug\ADO.dll
+C:\Users\MOHAN\source\repos\EngineeringEducationPortal\ADO\bin\Debug\ADO.pdb
+C:\Users\MOHAN\source\repos\EngineeringEducationPortal\ADO\bin\Debug\BusinessObjects.dll
+C:\Users\MOHAN\source\repos\EngineeringEducationPortal\ADO\bin\Debug\BusinessObjects.pdb
+C:\Users\MOHAN\source\repos\EngineeringEducationPortal\ADO\obj\Debug\EEP_DAL.csprojAssemblyReference.cache
+C:\Users\MOHAN\source\repos\EngineeringEducationPortal\ADO\obj\Debug\EEP_DAL.csproj.CoreCompileInputs.cache
+C:\Users\MOHAN\source\repos\EngineeringEducationPortal\ADO\obj\Debug\EEP_DAL.csproj.CopyComplete
+C:\Users\MOHAN\source\repos\EngineeringEducationPortal\ADO\obj\Debug\ADO.dll
+C:\Users\MOHAN\source\repos\EngineeringEducationPortal\ADO\obj\Debug\ADO.pdb
