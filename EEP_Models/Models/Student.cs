@@ -19,32 +19,12 @@ namespace EEP_Models.Models
         public long Aadhar { get; set; }
         public string Bloodgroup { get; set; }
         public string Photo { get; set; }
-
-
         public Department studentDepartment { get; set; }
         public Address StudentAddress{ get; set; }
-        
         public Btech btechDetails { get; set; }
-        
-        public string DRollNo { get; set; }
-        public int DMarks { get; set; }
-        public double DPercentage { get; set; }
-        public string DCertificate { get; set; }
-        public string DCollegeName { get; set; }
-        public string IRollNo { get; set; }
-        public int IMarks { get; set; }
-        public double IPercentage { get; set; }
-        public string ICertificate { get; set; }
-        public string ICollegeName { get; set; }
-        public string PRollNo { get; set; }
-        public int PMarks { get; set; }
-        public double PPercentage { get; set; }
-        public string PCertificate { get; set; }
-        public string PCollegeName { get; set; }
-        public string TRollNo { get; set; }
-        public int TMarks { get; set; }
-        public double TPercentage { get; set; }
-        public string TCertificate { get; set; }
-        public string TSchoolName { get; set; }
+        public Degree degreeDetails { get; set; }
+        public Inter interDetails { get; set; }
+        public PolyTechnic polytechnicDetails { get; set; }
+        public Tenth tenthDetails { get; set; }
     }
 }

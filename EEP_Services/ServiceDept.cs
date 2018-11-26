@@ -11,14 +11,14 @@ namespace EEP_Services
    public class ServiceDept:IServiceDept
     {
         EEP_Repository.RepositoryDept objrepdep = new RepositoryDept();
-        public int serviceaddemp(EEP_Models.Models.DeptModel objbomodel)
+        public int serviceaddemp(EEP_Models.Models.Department objbomodel)
         {
             int i= objrepdep.Deptadd(objbomodel);
             return i;
         }
-        public List<EEP_Models.Models.DeptModel> viewdept()
+        public List<EEP_Models.Models.Department> viewdept()
         {
-           List<EEP_Models.Models.DeptModel>li= objrepdep.viewdept();
+           List<EEP_Models.Models.Department>li= objrepdep.viewdept();
             return li;
         }
     }

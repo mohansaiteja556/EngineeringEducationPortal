@@ -5,6 +5,28 @@
     Layout = "~/Views/_AdminLayout.cshtml";
 }
 
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+       
+        $("#Department").change(function(){
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetRollNumber")',
+                dataType: 'json',
+                data: { id: $("#Department").val() },
+                success: function (data) {
+                    $("#model.RollNo").val()=data
+                },
+                error: function (ex) {
+                    alert('failed');
+                }
+            })
+        });
+    });
+</script>
+
+
 <h2>AddStudent</h2>
 
 @using (Html.BeginForm()) 

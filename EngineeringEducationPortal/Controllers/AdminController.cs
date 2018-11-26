@@ -10,7 +10,7 @@ namespace EngineeringEducationPortal.Controllers
 {
     public class AdminController : Controller
     {
-        EEP_Models.Models.DeptModel objbodept = new EEP_Models.Models.DeptModel();
+        EEP_Models.Models.Department objbodept = new EEP_Models.Models.Department();
         EEP_Services.ServiceDept objdepservice = new ServiceDept();
         EEP_Services.ServiceAuto objsauto = new ServiceAuto();
         EEP_Models.Models.Auto objboauto = new EEP_Models.Models.Auto();
@@ -29,7 +29,7 @@ namespace EngineeringEducationPortal.Controllers
             return View(objbodept);
         }
         [HttpPost]
-        public ActionResult AddDept(EEP_Models.Models.DeptModel objmodel)
+        public ActionResult AddDept(EEP_Models.Models.Department objmodel)
         {
             
             int i = objdepservice.serviceaddemp(objmodel);
@@ -46,12 +46,12 @@ namespace EngineeringEducationPortal.Controllers
         public ActionResult viewdept()
         {
             // List<BusinessObjects.Dept>li= objdaldept.viewdept();
-            List<EEP_Models.Models.DeptModel>li= objdepservice.viewdept();
+            List<EEP_Models.Models.Department>li= objdepservice.viewdept();
             return View(li);
         }
         public ActionResult AddStudent()
         {
-            List<EEP_Models.Models.DeptModel> li = objdepservice.viewdept();
+            List<EEP_Models.Models.Department> li = objdepservice.viewdept();
             List<SelectListItem> lidept = new List<SelectListItem>();
             lidept.Add(new SelectListItem { Text = "select Department", Value = "0" });
             foreach (var item in li)
@@ -59,6 +59,10 @@ namespace EngineeringEducationPortal.Controllers
                 lidept.Add(new SelectListItem { Text = item.DeptName, Value = item.DeptId });
             }
             ViewData["Department"] = lidept;
+            return View();
+        }
+        public ActionResult GetRollNumber()
+        {
             return View();
         }
     }

@@ -44,7 +44,7 @@
     <Compile Include="Models\Auto.cs" />
     <Compile Include="Models\Btech.cs" />
     <Compile Include="Models\Degree.cs" />
-    <Compile Include="Models\DeptModel.cs" />
+    <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Inter.cs" />
     <Compile Include="Models\PolyTechnic.cs" />
     <Compile Include="Models\Student.cs" />

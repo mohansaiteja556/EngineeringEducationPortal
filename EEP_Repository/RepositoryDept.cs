@@ -21,7 +21,7 @@ namespace EEP_Repository
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@DepId", objbodept.DeptId);
             cmd.Parameters.AddWithValue("@Deptname", objbodept.DeptName);
-            cmd.Parameters.AddWithValue("@DeptRoll", objbodept.DeptRoll);
+            cmd.Parameters.AddWithValue("@DeptRoll", objbodept.DeptRole);
             int i=cmd.ExecuteNonQuery();
             con.Close();
             return i;
@@ -41,9 +41,9 @@ namespace EEP_Repository
                             }).ToList();
             return li;
         }
-       public string GetRollNumber(string id)
-        {
-            SqlConnection con1 = new SqlConnection("");
-        }
+      // public string GetRollNumber(string id)
+       // {
+       //     SqlConnection con1 = new SqlConnection("");
+       // }
     }
 }
