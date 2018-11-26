@@ -1,2 +1,3 @@
 # EngineeringEducationPortal
-Engineering Education Portal which tell how the Engineering college functions--Updated
+Engineering Education Portal which tell how the Engineering college functions
+Logs Student Details.
