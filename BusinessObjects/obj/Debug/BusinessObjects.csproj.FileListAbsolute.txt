@@ -1,5 +1,0 @@
-C:\Users\MOHAN\source\repos\EngineeringEducationPortal\BusinessObjects\bin\Debug\BusinessObjects.dll
-C:\Users\MOHAN\source\repos\EngineeringEducationPortal\BusinessObjects\bin\Debug\BusinessObjects.pdb
-C:\Users\MOHAN\source\repos\EngineeringEducationPortal\BusinessObjects\obj\Debug\BusinessObjects.csproj.CoreCompileInputs.cache
-C:\Users\MOHAN\source\repos\EngineeringEducationPortal\BusinessObjects\obj\Debug\BusinessObjects.dll
-C:\Users\MOHAN\source\repos\EngineeringEducationPortal\BusinessObjects\obj\Debug\BusinessObjects.pdb
