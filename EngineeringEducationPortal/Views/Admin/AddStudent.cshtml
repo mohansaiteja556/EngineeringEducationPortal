@@ -32,11 +32,44 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $("#Studenttype").change(function () {
-            if ($(this).val() == "4")
-                alert('ok')
-            $("#Btech").css("visibility", "visible");
-            if ($(this).val() == "3")
-                $("#Degree").css("visibility", "visible");
+            if ($(this).val() == "4") {
+
+                $("#Btech").css("display", "block");
+
+            }
+            else {
+                $("#Btech").css("display", "none");
+            }
+            
+            
+            if ($(this).val() == "3") {
+
+                $("#Degree").css("display", "block");
+            }
+            else {
+                $("#Degree").css("display", "none");
+            }
+
+            
+            if ($(this).val() == "2") {
+                $("#Inter").css("display", "none");
+                $("#PT").css("display", "block");
+
+            }
+            else {
+                $("#PT").css("display", "none");
+                $("#Inter").css("display", "block");
+            }
+
+           
+           
+            
+            if ($(this).val() == "1") {
+                $("#Inter").css("display", "visible");
+            }
+            
+           
+            
         });
     });
 </script>
@@ -76,7 +109,7 @@
                 @Html.EditorFor(model => model.RollNo, new { htmlAttributes = new { @readonly = "readonly", @id = "t1", @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.RollNo, "", new { @class = "text-danger" })
             </td>
-            </tr>
+        </tr>
     </table>
     <div>
         <h2>Student Details</h2>
@@ -130,7 +163,7 @@
         @Html.ValidationMessageFor(model => model.StudentAddress.Pincode, "", new { @class = "text-danger" })
         <hr />
     </div>
-    <div>
+    <div id="Tenth">
         <h2>Tenth Details</h2>
         <hr />
         @Html.EditorFor(model => model.tenthDetails.TRollNo, new { htmlAttributes = new { @class = "form-control", @placeholder = "RollNo" } })
@@ -148,7 +181,7 @@
         @Html.ValidationMessageFor(model => model.tenthDetails.Timage)
         <hr />
     </div>
-    <div>
+    <div id="Inter" style="display:block">
         <h2>Inter Details</h2>
         <hr />
         @Html.EditorFor(model => model.interDetails.IRollNo, new { htmlAttributes = new { @class = "form-control", @placeholder = "RollNo" } })
@@ -166,7 +199,25 @@
         @Html.ValidationMessageFor(model => model.interDetails.Iimage)
         <hr />
     </div>
-    <div id="Degree" style="visibility:hidden">
+    <div id="PT" style="display:none">
+        <h2>PolyTechnic Details</h2>
+        <hr />
+        @Html.EditorFor(model => model.polytechnicDetails.PRollNo, new { htmlAttributes = new { @class = "form-control", @placeholder = "RollNo" } })
+        @Html.ValidationMessageFor(model => model.polytechnicDetails.PRollNo, "", new { @class = "text-danger" })
+        @Html.EditorFor(model => model.polytechnicDetails.PMarks, new { htmlAttributes = new { @class = "form-control", @placeholder = "Marks" } })
+        @Html.ValidationMessageFor(model => model.polytechnicDetails.PMarks, "", new { @class = "text-danger" })
+        @Html.EditorFor(model => model.polytechnicDetails.PPercentage, new { htmlAttributes = new { @class = "form-control", @placeholder = "Percentage" } })
+        @Html.ValidationMessageFor(model => model.polytechnicDetails.PPercentage, "", new { @class = "text-danger" })
+        @Html.EditorFor(model => model.polytechnicDetails.PCollegeName, new { htmlAttributes = new { @class = "form-control", @placeholder = "College Name" } })
+        @Html.ValidationMessageFor(model => model.polytechnicDetails.PCollegeName, "", new { @class = "text-danger" })
+        <br />
+        <br />
+        <span>Add PolyTechnic Certificate</span>
+        @Html.TextBoxFor(model => model.polytechnicDetails.Pimage, new { type = "file" })
+        @Html.ValidationMessageFor(model => model.polytechnicDetails.Pimage)
+        <hr />
+    </div>
+    <div id="Degree" style="display:none">
         <h2>Degree Details</h2>
         <hr />
         @Html.EditorFor(model => model.degreeDetails.DRollNo, new { htmlAttributes = new { @class = "form-control", @placeholder = "RollNo" } })
@@ -184,7 +235,7 @@
         @Html.ValidationMessageFor(model => model.degreeDetails.Dimage)
         <hr />
     </div>
-    <div id="Btech" style="visibility:hidden">
+    <div id="Btech" style="display:none">
         <h2>Btech Details</h2>
         <hr />
         @Html.EditorFor(model => model.btechDetails.BtechRollNo, new { htmlAttributes = new { @class = "form-control", @placeholder = "RollNo" } })
@@ -202,8 +253,8 @@
         @Html.ValidationMessageFor(model => model.btechDetails.Bimage)
         <hr />
     </div>
-   
-   
+
+
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
