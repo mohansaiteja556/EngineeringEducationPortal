@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace EEP_Models.Models
 {
@@ -26,5 +27,6 @@ namespace EEP_Models.Models
         public Inter interDetails { get; set; }
         public PolyTechnic polytechnicDetails { get; set; }
         public Tenth tenthDetails { get; set; }
+        public HttpPostedFileBase image { get; set; }
     }
 }

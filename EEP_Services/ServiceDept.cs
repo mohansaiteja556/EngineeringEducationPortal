@@ -21,5 +21,31 @@ namespace EEP_Services
            List<EEP_Models.Models.Department>li= objrepdep.viewdept();
             return li;
         }
+        public string GetRollNumber(string id)
+        {
+            string s= objrepdep.GetRollNumber(id);
+            char[] ch = s.ToCharArray();
+            string[] s1;
+            string n="";
+            int a = 0;
+            for (int i=0;i<=ch.Length-1;i++)
+            {
+                if(ch[i]=='A')
+                {
+                   s1 = s.Split('A');
+                    a = int.Parse(s1[1]);
+                    a++;
+                    n = s1[0] + "A" +"0"+ a;
+                }
+                if (s[i] == 'B')
+                {
+                    s1 = s.Split('B');
+                    a = int.Parse(s1[1]);
+                    a++;
+                    n = s1[0] + "B" + a;
+                }
+            }
+            return n;
+        }
     }
 }

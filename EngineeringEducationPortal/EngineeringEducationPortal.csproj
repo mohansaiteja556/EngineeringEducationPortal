@@ -159,6 +159,12 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="StudentCertificate\Btech\" />
+    <Folder Include="StudentCertificate\Degree\" />
+    <Folder Include="StudentCertificate\Inter\" />
+    <Folder Include="StudentCertificate\Pt\" />
+    <Folder Include="StudentCertificate\Tenth\" />
+    <Folder Include="StudentImages\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EEP_Models\EEP_Models.csproj">

@@ -10,6 +10,6 @@ namespace EEP_Models.Repository_Interface
     {
         int Deptadd(EEP_Models.Models.Department objbodept);
         List<EEP_Models.Models.Department> viewdept();
-        //string GetRollNumber(string id);
+        string GetRollNumber(string id);
     }
 }

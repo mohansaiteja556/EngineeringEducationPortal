@@ -10,5 +10,6 @@ namespace EEP_Models.Service_Interface
     {
         int serviceaddemp(EEP_Models.Models.Department objbomodel);
         List<EEP_Models.Models.Department> viewdept();
+        string GetRollNumber(string id);
     }
 }

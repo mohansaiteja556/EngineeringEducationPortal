@@ -41,9 +41,15 @@ namespace EEP_Repository
                             }).ToList();
             return li;
         }
-      // public string GetRollNumber(string id)
-       // {
-       //     SqlConnection con1 = new SqlConnection("");
-       // }
+       public string GetRollNumber(string id)
+        {
+          // SqlConnection con1 = new SqlConnection("user id = sa; password = abc; database = demo; data source =.");
+            con.Open();
+            string s = "select DeptRoll from Department where DeptId='"+id+"'";
+            SqlCommand cmd = new SqlCommand(s,con);
+            string a1= cmd.ExecuteScalar().ToString();
+            con.Close();
+            return a1;
+        }
     }
 }
