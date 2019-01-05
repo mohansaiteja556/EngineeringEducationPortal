@@ -105,6 +105,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Grid.mvc.readme" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\gridmvc.js" />
     <Content Include="Scripts\gridmvc.lang.ru.js" />
@@ -170,6 +171,10 @@
     <ProjectReference Include="..\EEP_Models\EEP_Models.csproj">
       <Project>{cfd312ce-5d10-4986-bdeb-0f4447e939fd}</Project>
       <Name>EEP_Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EEP_Repository\EEP_Repository.csproj">
+      <Project>{4B045C9F-1016-41D7-827C-C93195F8F3B5}</Project>
+      <Name>EEP_Repository</Name>
     </ProjectReference>
     <ProjectReference Include="..\EEP_Services\EEP_Services.csproj">
       <Project>{21d2d84f-ef14-479d-8196-ed42f3a3b2c3}</Project>

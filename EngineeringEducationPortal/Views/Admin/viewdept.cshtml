@@ -1,4 +1,4 @@
-﻿@model IEnumerable<EEP_Models.Models.DeptModel>
+﻿@model IEnumerable<EEP_Models.Models.Department>
 @using GridMvc.Html
 @{
     ViewBag.Title = "viewdept";
@@ -18,7 +18,7 @@
 @Html.Grid(Model).Columns(Columns=> {
     Columns.Add(c => c.DeptId).Titled("DeptId").Filterable(true);
     Columns.Add(c => c.DeptName).Titled("DeptName").Filterable(true);
-    Columns.Add(c => c.DeptRoll).Titled("DeptRoll").Filterable(true);
+    Columns.Add(c => c.DeptRole).Titled("DeptRoll").Filterable(true);
     Columns.Add()
             .Encoded(false)
             .Sanitized(false)

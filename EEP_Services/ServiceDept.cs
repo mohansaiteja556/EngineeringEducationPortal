@@ -4,13 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EEP_Models.Models;
+using EEP_Models.Repository_Interface;
 using EEP_Models.Service_Interface;
 using EEP_Repository;
 namespace EEP_Services
 {
    public class ServiceDept:IServiceDept
     {
-        EEP_Repository.RepositoryDept objrepdep = new RepositoryDept();
+        IRepositoryDept objrepdep;
+        public ServiceDept(IRepositoryDept repositoryDept)
+        {
+            objrepdep = repositoryDept;
+        }
+        
         public int serviceaddemp(EEP_Models.Models.Department objbomodel)
         {
             int i= objrepdep.Deptadd(objbomodel);

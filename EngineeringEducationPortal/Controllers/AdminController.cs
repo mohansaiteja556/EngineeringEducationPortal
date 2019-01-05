@@ -7,12 +7,16 @@ using System.Data;
 using EEP_Services;
 using EEP_Models;
 using System.IO;
+using EEP_Repository;
+
 namespace EngineeringEducationPortal.Controllers
 {
     public class AdminController : Controller
     {
+
         EEP_Models.Models.Department objbodept = new EEP_Models.Models.Department();
-        EEP_Services.ServiceDept objdepservice = new ServiceDept();
+      // EEP_Repository.RepositoryDept repositoryDept = new RepositoryDept();
+         EEP_Services.ServiceDept objdepservice = new ServiceDept(new RepositoryDept());
         EEP_Services.ServiceAuto objsauto = new ServiceAuto();
         EEP_Models.Models.Auto objboauto = new EEP_Models.Models.Auto();
         // GET: Admin
