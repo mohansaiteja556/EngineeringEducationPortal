@@ -16,6 +16,7 @@ namespace EEP_Services
             string s= objreauto.Getauto(objauto);
            string[]s1= s.Split('_');
             int a = int.Parse(s1[1]);
+            throw new Exception("message");
             a++;
             string id = s1[0] + "_" + a;
             return id;

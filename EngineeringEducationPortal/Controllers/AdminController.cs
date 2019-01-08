@@ -22,16 +22,20 @@ namespace EngineeringEducationPortal.Controllers
         // GET: Admin
         public ActionResult Index()
         {
-            
+          
             return View();
         }
         [HttpGet]
         public ActionResult AddDept()
         {
-            objboauto.TableName = "Department";
-            objboauto.ColunmName = "DeptId";
-            objbodept.DeptId = objsauto.Getauto(objboauto);
-            return View(objbodept);
+            
+                objboauto.TableName = "Department";
+                objboauto.ColunmName = "DeptId";
+                objbodept.DeptId = objsauto.Getauto(objboauto);
+                return View(objbodept);
+             
+            
+           
         }
         [HttpPost]
         public ActionResult AddDept(EEP_Models.Models.Department objmodel)

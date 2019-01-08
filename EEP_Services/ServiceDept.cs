@@ -15,12 +15,14 @@ namespace EEP_Services
         public ServiceDept(IRepositoryDept repositoryDept)
         {
             objrepdep = repositoryDept;
+            
         }
         
         public int serviceaddemp(EEP_Models.Models.Department objbomodel)
         {
             int i= objrepdep.Deptadd(objbomodel);
             return i;
+           
         }
         public List<EEP_Models.Models.Department> viewdept()
         {
